@@ -57,6 +57,7 @@ jobs:
       uses: azure/login@v2.1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        auth-type: 'spn'
     - name: Deploy to Azure Web App
       id:   app-deploy
       uses: azure/webapps-deploy@v2
